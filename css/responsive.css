@@ -1,0 +1,372 @@
+
+
+/* ##########################   Media Queries  (Ipad and Tablets)
+############################*/
+
+
+@media  screen and (max-width:1024px){
+
+    .container
+    {
+       width: var(--container-width-md);
+    }
+   h1 
+   {
+       font-size: 2rem;
+   }
+   h2 
+   {
+       font-size: 1.7rem;
+   }
+   h3 
+   {
+       font-size: 1.5rem;
+   }
+   h4
+   {
+       font-size: 1.2rem;
+   }
+   
+   
+   /*########### Nav Bar  ################*/
+   nav button 
+   {
+       display: inline-block;
+       background: transparent;
+       color: var(--color-white);
+       font-size:1.8rem;
+       cursor: pointer;
+   }
+   nav button#close-menu-btn
+   {
+       display: none;
+   }
+   
+   .nav__menu
+   {
+       position: fixed;
+       top: 5.1rem;
+       right: 5%;
+       /* height: fit-content; */
+       width: 15rem;
+       flex-direction: column;
+       gap: 0;
+       display: none;
+   }
+   
+   .nav__menu li 
+   {
+       width: 100%;
+       height: 5.8rem;
+       animation: animateNavItems 400ms linear forwards;
+       transform-origin: top right;
+       /* opacity: 0; */
+       border-top: .10px solid #1b4f68;
+   }
+
+   .nav__menu li:nth-child(1) {
+  
+    border-top: none;
+  }
+   .nav__menu li:nth-child(2)
+   {
+       animation-delay: 200ms;
+   }
+   
+   .nav__menu li:nth-child(3)
+   {
+       animation-delay: 400ms;
+   }
+   .nav__menu li:nth-child(4)
+   {
+       animation-delay: 600ms;
+   }
+   /* Mobile btn menu animation */
+   @keyframes animateNavItems {
+       0%{
+              transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+       }
+       100%{
+           transform: rotateZ(0)rotateX(0) scale(1);
+       }
+   }
+   .nav__menu li a
+   {
+      background: var(--color-primary);
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+   }
+   .nav__menu li a:hover 
+   {
+       background: var(--color-bg2);
+       color:var(--color-white);
+   }
+ 
+
+ /* #############################  Header CSS
+    ###################################  */
+
+   header
+   {
+    height: 53vh;
+    margin-bottom: 4rem;
+   }
+
+   .header__container
+   {
+    gap:0;
+    padding-bottom: 3rem;
+   }
+
+    /* #############################  Category CSS
+    ###################################  */
+    .categories
+    {
+     height: auto;
+    }
+    .categories__container
+    {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .categories_left
+    {
+        text-align: center;
+    } 
+       /* #############################
+    ###################################  courses css  */
+
+    .courses 
+    {
+        margin-top: 0;
+    }
+    .courses__container
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+         /* #############################
+    ###################################  FAQ css  */
+
+    .faqs__container
+    {
+        grid-template-columns: 1fr;
+    }
+    .faq
+    {
+        padding: 1.5rem;
+    }
+         /* #############################
+    ###################################   achievement CSS */
+    .achievement__container
+{
+  
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+}
+         /* #############################
+    ###################################   Team CSS */
+.team__container
+{
+
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+   /* #############################
+    ###################################  Footer css  */
+
+    .footer__container
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+ }
+
+
+ /* 
+ --------------------------------------------------------------------------------------------------------
+ ======================================================================================================== */
+ 
+/* ##########################   Media Queries  (Phone)
+############################*/
+
+@media  screen and (max-width:600px){
+
+
+.container
+{
+    width: var(--container-width-sm);
+}
+
+.nav__menu 
+{
+    right:3%;
+}
+
+
+ /* #############################  Header CSS
+    ###################################  */
+
+    header
+    {
+     height: 100vh;
+
+    }
+ 
+    .header__container
+    {
+       grid-template-columns: 1fr;
+       text-align: center;
+       margin-top: 0;
+    }
+    
+        .header__left p
+        {
+       margin-bottom: 1.3rem;
+
+        }
+
+
+     /* #############################  Category CSS
+     ###################################  */
+   
+     .categories_right
+     {
+         grid-template-columns: 1fr 1fr;
+         gap: 0.73rem;
+     }
+     .categories__container
+     {
+         grid-template-columns: 1fr;
+        
+     }
+     .categories_left
+     {
+         text-align: center;
+         width: 100%;
+     } 
+
+     .category
+     {
+        padding: 1rem;
+        border-radius: 1rem;
+     }
+
+     .category__icon
+     {
+        margin-top: 4px;
+        display: inline-block;
+    }
+    .category p {
+        font-size: 11px;
+      }
+
+/* #############################  Coourses CSS
+     ###################################  */
+
+.courses__container
+{
+    grid-template-columns: 1fr;
+    padding: 2rem;
+}
+
+.course__info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 14px;
+  }
+/* #############################  Testimonial CSS
+     ###################################  */
+
+.testimonial__body
+{
+    padding: 1.2rem;
+}
+.team__social  a 
+{
+    padding: 0.7rem;
+}
+.achievement__right p 
+{
+    font-size: 14px;
+}
+/* #############################  Achievement CSS
+     ###################################  */
+.achievement__cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+  
+  }
+.achievement__icon {
+   
+    padding: 0.6rem 1rem;
+    border-radius: 0.7rem;
+    margin-bottom: 1.6rem;
+    font-size: 1.2rem;
+   
+  }
+
+  .team__info h4 
+  {
+    font-size: 14px;
+  }
+  .team__info p 
+  {
+    font-size: 12px;
+  }
+  .team__social {
+ 
+    border-radius: .7rem 0 0 0.7rem;
+  }
+  .team__social a {
+    padding: 5px;
+  }
+/* #############################  Footer CSS
+     ###################################  */
+
+.footer__container
+{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+}
+
+.footer__1 p {
+    margin: 1rem auto;
+}
+.footer__socials
+{
+    justify-content: center;
+}
+}
+
+ /* 
+ --------------------------------------------------------------------------------------------------------
+ ======================================================================================================== */
+ 
+/* ##########################   Media Queries  (Phone)
+############################*/
+
+@media  screen and (max-width:330px)
+
+{
+    h2 {
+        font-size: 1.5rem;
+      }
+    p {
+        font-size:12px!important;
+    }
+.team__container
+{
+    grid-template-columns: 1fr;
+}
+.achievement__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+}
